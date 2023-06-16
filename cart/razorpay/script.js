@@ -21,12 +21,13 @@ document.getElementById("payBtn").onclick = function (e) {
       "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
       handler: function () {
           // Redirect the user to the shop.html page after the payment is completed
-          window.location.href = "../../../f3-project-main/shop/index.html";
+          window.location.href = "../../../Shopping%20Cart/shop/index.html";
         },
   };
 
   var rzpy1 = new Razorpay(options);
   rzpy1.open();
-  // clear mycart - localStorage
+  localStorage.removeItem("cartProducts");
   e.preventDefault();
 };
+
